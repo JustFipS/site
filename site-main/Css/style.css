@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  place-items: center;
+  background:radial-gradient(#ccc, #999);
+  
+}
+.a{
+  opacity: 50%;
+}
+.text{
+text-align:  bottom;
+color: rgb(175, 172, 172);
+opacity: 50%;
+}
+.text-1{
+  text-align:  bottom;
+  color: rgb(34, 23, 23);
+  opacity: 25%;
+  }
+h1 {
+
+  color: rgb(41, 50, 58);
+}
+
+.box-1{
+  display: flex;
+  background:rgba(175, 174, 174, 0.938);
+  padding: 9px 14px;
+  border-radius: 95px;
+  box-shadow: 8px 8px 16px  rgba(46, 46, 46, 0.1);
+  gap: 25px;
+  text-decoration: none;
+}
+
+.header a {
+  float: left;
+  color: rgb(65, 65, 65);
+  text-align: center;
+  padding: 35px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.header a:hover {
+  
+  opacity: 10%;
+  color: rgb(255, 255, 255);
+}
+
+.header-right {
+  float: right;
+  padding: 5px;
+}
+
+@media screen and (max-width: 500px) {
+.header a {
+  float: none;
+
+  }
+}
+h4 {
+  width: 85%;
+
+}
+.ad{
+  color: rgba(0, 0, 0, 0.26);
+  text-decoration:none;
+}
+
+a{
+text-decoration:none;
+color: #999;
+}
+.text-2{
+	line-height: 20px;
+	text-align: justify;
+  width: 250px;
+}
+.text-2::selection{
+  background-color: transparent;
+  color: #f7e69a;
+  }
