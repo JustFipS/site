@@ -25,6 +25,13 @@ opacity: 50%;
   color: rgb(34, 23, 23);
   opacity: 25%;
   }
+  .text-1::selection{
+    background-color: transparent;
+    color: #f7e69a;
+    }
+
+
+
 h1 {
 
   color: rgb(41, 50, 58);
@@ -42,7 +49,7 @@ h1 {
 
 .header a {
   float: left;
-  color: rgb(65, 65, 65);
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 35px;
   text-decoration: none;
@@ -51,8 +58,8 @@ h1 {
 
 .header a:hover {
   
-  opacity: 10%;
-  color: rgb(255, 255, 255);
+  opacity: 40%;
+  color: rgb(0, 0, 0);
 }
 
 .header-right {
@@ -70,14 +77,14 @@ h4 {
   width: 85%;
 
 }
-.ad{
-  color: rgba(0, 0, 0, 0.26);
-  text-decoration:none;
-}
-
 a{
 text-decoration:none;
-color: #999;
+color: rgb(255, 255, 255);
+}
+
+a::selection{
+background-color: transparent;
+color: #f7e69a;
 }
 .text-2{
 	line-height: 20px;
