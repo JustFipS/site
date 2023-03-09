@@ -75,7 +75,6 @@ h1 {
 }
 h4 {
   width: 85%;
-
 }
 a{
 text-decoration:none;
@@ -87,9 +86,9 @@ background-color: transparent;
 color: #f7e69a;
 }
 .text-2{
-line-height: 20px;
-text-align: center;
-width: 250px;
+	line-height: 20px;
+	text-align: center;
+  width: 250px;
 }
 .text-2::selection{
   background-color: transparent;
