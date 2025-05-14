@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Playwrite+HU:wght@100..400&family=Rock+Salt&family=Whisper&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Gayathri:wght@100;400;700&family=Lexend+Tera:wght@300&family=Patrick+Hand&family=Six+Caps&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&family=Voltaire&family=Wire+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Gayathri:wght@100;400;700&family=Lexend+Tera:wght@300&family=Patrick+Hand&family=Six+Caps&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&family=Voltaire&family=Wire+One&display=swap');
+
 
 :root {
   --sizeindex: clamp(1rem, calc(1vw + 1vh), 1.8rem);
@@ -112,6 +113,7 @@ h2 {
 }
 
 a, p {
+  padding:12px;
   font-family: "Thasadith", sans-serif;
   font-weight: 700;
   text-decoration: none;
@@ -131,7 +133,7 @@ a, p {
   width: calc(var(--sizeindex) * 16);
   height: auto;
   object-fit: contain;
-  pointer-events: none;
+  pointer-events: none !important;
   user-select: none;
   display: block;
 }
@@ -236,14 +238,25 @@ nav.top-nav a,
     align-items: center;
     text-align: center;
   }
+.font{
+  font-family: "Codystar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
   #section3 h2 {
-    text-align: center;
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-style: normal;
   }
   #section2 {
     align-items: center;
     text-align: center;
   }
   #section2 h2 {
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
   }
 }
