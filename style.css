@@ -227,6 +227,13 @@ nav.top-nav a,
   .video-container video {
     width: 75%; 
   }
+  .video-container .video-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: transparent;        
+    pointer-events: all;             
+  }
  
   header#date-header, nav.top-nav a {
     font-size: calc(var(--sizeindex) * 0.9);
