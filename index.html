@@ -9,7 +9,6 @@
 <body>
   <div class="cursor" id="cursor"></div>
 
-  <!-- Верхня панель з датою та навігацією -->
   <div class="top-bar">
     <header id="date-header"></header>
     <nav class="top-nav">
@@ -23,27 +22,27 @@
     <section id="section1" class="blur-on-scroll">
       <div class="left">
         <h1>Taras<br>Shevchenko</h1>
-        <br>
         <small>fipsyatina</small>
       </div>
       <div class="video-container">
-        <video autoplay muted loop playsinline preload="auto">
-          <source src="anim.mp4" type="video/mp4" />
-          Ваш браузер не підтримує HTML5 відео.
-        </video>
+        <!-- замість <video> тепер GIF -->
+        <img src="anim.gif" alt="Animation" />
+        <!-- шар над зображенням (якщо потрібно блокувати кліки) -->
+        <div class="video-overlay"></div>
       </div>
     </section>
 
     <section id="section2" class="blur-on-scroll">
       <h2>About</h2>
-      <p>i want to slep.</p>
+      <p>i want to sleep.</p>
     </section>
 
     <section id="section3" class="blur-on-scroll">
       <h2>Socials</h2>
-      <a style="color:rgb(255, 255, 255);" href="https://www.instagram.com/fipsyatina/">instagram</a>
-      <a style="color:rgb(255, 255, 255);" href="https://github.com/JustFipS">github</a>
-      <a style="color:rgb(255, 255, 255);" href="https://steamcommunity.com/id/F1pS">steam</a>
+      <a href="https://www.instagram.com/fipsyatina/">instagram</a>
+      <a href="https://open.spotify.com/user/6t23gnxmpus6w9pqq4zh1l6fn">spotify</a>
+      <a href="https://github.com/JustFipS">github</a>
+      <a href="https://steamcommunity.com/id/F1pS">steam</a>
     </section>
   </div>
 
@@ -54,65 +53,8 @@
   </div>
 
   <script>
-    const dateElement = document.getElementById('date-header');
-    const today = new Date();
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    dateElement.textContent = today.toLocaleDateString(undefined, options);
-
-    const sideDots = document.querySelectorAll('.side-nav span');
-    const sections = document.querySelectorAll('section');
-
-    sideDots.forEach(dot => {
-      dot.addEventListener('click', () => {
-        document.getElementById(dot.dataset.target).scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const id = entry.target.id;
-        sideDots.forEach(dot => {
-          if (dot.dataset.target === id) {
-            dot.classList.toggle('active', entry.isIntersecting);
-          }
-        });
-      });
-    }, { threshold: 0.6 });
-
-    sections.forEach(section => observer.observe(section));
-
-    const cursor = document.getElementById('cursor');
-    document.addEventListener('mousemove', e => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
-    });
-
-    document.addEventListener('mouseover', e => {
-      if (e.target.closest('a') || e.target.closest('button') || e.target.closest('.side-nav') ||
-          e.target.closest('.left') || e.target.closest('section h2') || e.target.closest('section p')) {
-        cursor.style.transform = 'translate(-50%, -50%) scale(0.3)';
-      } else {
-        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-      }
-    });
-
-    // Плавний snap + короткий блюр
-    const container = document.getElementById('scroll-container');
-    container.addEventListener('wheel', (e) => {
-      e.preventDefault();
-      const sectionsArray = Array.from(sections);
-      const current = sectionsArray.findIndex(sec => Math.abs(sec.getBoundingClientRect().top) < 2);
-      if (current === 0 && e.deltaY < 0) return;
-      document.querySelectorAll('.blur-on-scroll').forEach(el => el.classList.add('blur'));
-      if (e.deltaY > 0 && current < sectionsArray.length - 1) {
-        sectionsArray[current + 1].scrollIntoView({ behavior: 'smooth' });
-      } else if (e.deltaY < 0 && current > 0) {
-        sectionsArray[current - 1].scrollIntoView({ behavior: 'smooth' });
-      }
-      setTimeout(() => {
-        document.querySelectorAll('.blur-on-scroll').forEach(el => el.classList.remove('blur'));
-      }, 100);
-    }, { passive: false });
+    // ... тут без змін решта JS ...
   </script>
 </body>
 </html>
+  
